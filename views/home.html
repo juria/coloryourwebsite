@@ -4,15 +4,13 @@
 		<ul>
 			<li>
 				<p class="label">Font Color:</p>
-				<input type="text" ng-model="headerFontColor">
-				<input type="button" value="Set" ng-click="adjustCSS('header', 'color', '#' + headerFontColor)">
-				<input name="testname" type="range" min="0" max="255" ng-model="headerFontColorRed" ng-change="console.log(headerFontColorRed)">
-				<p style="display: inline-block;">{{headerFontColorRed}}</p>
+				<input type="text" ng-model="headerFontColor" ng-change="adjustCSS('header', 'color', '#' + headerFontColor)">
+				<input name="testname" type="range" min="0" max="255" ng-model="headerFontColorRed" ng-change="adjustCSS('header', 'background-color', '#' + headerBackgroundColor)">
+				{{headerFontColorRed}}
 			</li>
 			<li>
 				<p class="label">Background Color:</p>
-				<input type="text" ng-model="headerBackgroundColor">
-				<input type="button" value="Set" ng-click="adjustCSS('header', 'background-color', '#' + headerBackgroundColor)">
+				<input type="text" ng-model="headerBackgroundColor" ng-change="adjustCSS('header', 'background-color', '#' + headerBackgroundColor)">
 			</li>
 		</ul>
 	</div>
@@ -21,13 +19,11 @@
 		<ul>
 			<li>
 				<p class="label">Font Color:</p>
-				<input type="text" ng-model="contentFontColor">
-				<input type="button" value="Set" ng-click="adjustCSS('#content', 'color', '#' + contentFontColor)">
+				<input type="text" ng-model="contentFontColor" ng-change="adjustCSS('#content', 'color', '#' + contentFontColor)">
 			</li>
 			<li>
 				<p class="label">Background Color:</p>
-				<input type="text" ng-model="contentBackgroundColor">
-				<input type="button" value="Set" ng-click="adjustCSS('body', 'background-color', '#' + contentBackgroundColor)">
+				<input type="text" ng-model="contentBackgroundColor" ng-change="adjustCSS('body', 'background-color', '#' + contentBackgroundColor)">
 			</li>
 		</ul>
 	</div>

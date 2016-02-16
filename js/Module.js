@@ -11,6 +11,11 @@
 				controller: 'MainController'
 			});
 
+			$routeProvider.when('/text', {
+				templateUrl: 'views/text.html',
+				controller: 'MainController'
+			});
+
 			$routeProvider.otherwise({
 				redirectTo: '/home'
 			});

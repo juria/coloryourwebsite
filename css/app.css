@@ -33,6 +33,35 @@ ul {
 	list-style: none;
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 body {
 	font-family: sans-serif;
+}
+
+header {
+	border-bottom: 1px solid #000;
+}
+
+header nav ul li {
+	display: inline-block;
+	line-height: 3em;
+	padding: 0 8px;
+	font-weight: bold;
+}
+
+header nav ul li:first-of-type{
+	padding: 0 16px 0 20px;
+	font-style: italic;
+}
+
+#content {
+	padding: 20px;
+}
+
+#content h2 {
+	margin-bottom: 10px;
 }

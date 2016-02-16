@@ -65,3 +65,7 @@ header nav ul li:first-of-type{
 #content h2 {
 	margin-bottom: 10px;
 }
+
+.label, input, .button {
+	display: inline-block;
+}

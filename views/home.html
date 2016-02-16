@@ -1,5 +1,10 @@
 <div id="content">
 	<ul>
-		<li>HOME</li>
+		<li>
+			<p class="label">Font Color:</p>
+			<input type="text" ng-model="color">
+			<input type="submit" value="Try" ng-click="dye('body', 'color', color)">
+			<p class="button" ng-bind="color"></p>
+		</li>
 	</ul>
 </div>

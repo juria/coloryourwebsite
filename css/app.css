@@ -70,18 +70,22 @@ header nav ul li:first-of-type{
 	margin-bottom: 10px;
 }
 
-.label, input, .button {
-	display: inline-block;
-}
-
-#content table:last-of-type {
+#content ul {
 	margin-bottom: 20px;
 }
 
-#content table tr td:first-of-type {
+#content ul li .label {
+	display: inline-block;
+	width: 150px;
+}
+
+#content ul li p:first-of-type {
 	margin-right: 8px;
 }
 
-#content table tr td input[type=text] {
+#content ul li input[type=text] {
 	width: 50px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+	color: inherit;
 }

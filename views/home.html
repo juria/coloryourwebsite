@@ -6,6 +6,8 @@
 				<p class="label">Font Color:</p>
 				<input type="text" ng-model="headerFontColor">
 				<input type="button" value="Set" ng-click="adjustCSS('header', 'color', '#' + headerFontColor)">
+				<input name="testname" type="range" min="0" max="255" ng-model="headerFontColorRed" ng-change="console.log(headerFontColorRed)">
+				<p style="display: inline-block;">{{headerFontColorRed}}</p>
 			</li>
 			<li>
 				<p class="label">Background Color:</p>

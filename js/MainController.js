@@ -9,6 +9,7 @@
 		$scope.settingsVisible = true;
 
 		$scope.headerFontColor = "FFF";
+		$scope.headerFontColorRed = 255;
 		$scope.headerBackgroundColor = "554DD8";
 		// $scope.headerBorder = "none";
 
@@ -21,7 +22,7 @@
 			console.log("Set " + property + " of " + selector + " to " + value);
 			$(selector).css(property, value);
 		};
-
+		
 	}]);
 
 }(this.app, this.document));

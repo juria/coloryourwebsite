@@ -8,16 +8,19 @@
 
 		$scope.settingsVisible = true;
 
-		$scope.headerFontColor = "000000";
-		$scope.headerBackgroundColor = "FFFFFF";
-		$scope.contentFontColor = "000000";
-		$scope.contentBackgroundColor = "FFFFFF";
+		$scope.headerFontColor = "FFF";
+		$scope.headerBackgroundColor = "554DD8";
+		// $scope.headerBorder = "none";
 
-		$scope.dye = function(selector, property, value) {
+		$scope.contentFontColor = "FFF";
+		$scope.contentBackgroundColor = "2219B2";
+
+		
+
+		$scope.adjustCSS = function(selector, property, value) {
 			console.log("Set " + property + " of " + selector + " to " + value);
-			$(selector).css(property, "#" + value);
+			$(selector).css(property, value);
 		};
-
 
 	}]);
 

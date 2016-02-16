@@ -10,9 +10,9 @@
 				templateUrl: 'views/home.html'
 			});
 
-			$routeProvider.when('/text', {
-				templateUrl: 'views/text.html'
-			});
+			// $routeProvider.when('/text', {
+			// 	templateUrl: 'views/text.html'
+			// });
 
 			$routeProvider.otherwise({
 				redirectTo: '/home'

@@ -1,26 +1,61 @@
-<ul>
-	<li>
-		<p class="label">Header Font Color:</p>
-		<input type="text" ng-model="headerFontColor">
-		<input type="submit" value="Try" ng-click="dye('header', 'color', headerFontColor)">
-		<p class="button" ng-bind="headerFontColor"></p>
-	</li>
-	<li>
-		<p class="label">Header Background Color:</p>
-		<input type="text" ng-model="headerBackgroundColor">
-		<input type="submit" value="Try" ng-click="dye('header', 'background-color', headerBackgroundColor)">
-		<p class="button" ng-bind="headerBackgroundColor"></p>
-	</li>
-	<li>
-		<p class="label">Content Font Color:</p>
-		<input type="text" ng-model="contentFontColor">
-		<input type="submit" value="Try" ng-click="dye('#content', 'color', contentFontColor)">
-		<p class="button" ng-bind="contentFontColor"></p>
-	</li>
-	<li>
-		<p class="label">Content Background Color:</p>
-		<input type="text" ng-model="contentBackgroundColor">
-		<input type="submit" value="Try" ng-click="dye('#content', 'background-color', contentBackgroundColor)">
-		<p class="button" ng-bind="contentBackgroundColor"></p>
-	</li>
-</ul>
+<div ng-show="settingsVisible">
+	<div id="header_settings">
+		<h2>Header</h2>
+		<table>
+			<tr>
+				<td class="label">Font Color:</td>
+				<td><input type="text" ng-model="headerFontColor"></td>
+				<td><input type="button" value="Set" ng-click="adjustCSS('header', 'color', '#' + headerFontColor)"></td>
+				<td class="button" ng-bind="headerFontColor"></td>
+			</tr>
+			<tr>
+				<td class="label">Background Color:</td>
+				<td><input type="text" ng-model="headerBackgroundColor"></td>
+				<td><input type="button" value="Set" ng-click="adjustCSS('header', 'background-color', '#' + headerBackgroundColor)"></td>
+				<td class="button" ng-bind="headerBackgroundColor"></td>
+			</tr>
+		</table>
+		<!-- <table>
+			<tr>
+				<td class="label">Border:</td>
+				<td>
+					<input type="radio" name="border" value="none" checked ng-model="headerBorder" ng-change="adjustCSS('header', 'border-bottom', 'none')">None<br>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="radio" name="border" value="border" ng-model="headerBorder" ng-change="adjustCSS('header', 'border-bottom', '2px solid #000')">Border<br>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="radio" name="border" value="shadow" ng-model="headerBorder" ng-change="adjustCSS('header', 'border-bottom', 'none')">Shadow
+				</td>
+			</tr>
+		</table> -->
+	</div>
+	<div id="content_settings">
+		<h2>Content</h2>
+		<table>
+			<tr>
+				<td class="label">Font Color:</td>
+				<td><input type="text" ng-model="contentFontColor"></td>
+				<td><input type="submit" value="Set" ng-click="adjustCSS('#content', 'color', '#' + contentFontColor)"></td>
+				<td class="button" ng-bind="contentFontColor"></td>
+			</tr>
+			<tr>
+				<td class="label">Background Color:</td>
+				<td><input type="text" ng-model="contentBackgroundColor"></td>
+				<td><input type="submit" value="Set" ng-click="adjustCSS('body', 'background-color', '#' + contentBackgroundColor)"></td>
+				<td class="button" ng-bind="contentBackgroundColor"></td>
+			</tr>
+		</table>
+	</div>
+		
+</div>
+<div ng-show="!settingsVisible">
+	<h2>Lorem Ipsum</h2>
+	<article>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</article>
+</div>

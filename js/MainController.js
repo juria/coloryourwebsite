@@ -6,7 +6,12 @@
 	 */
 	app.controller('MainController', ['$scope', function ($scope) {
 
-		$scope.color = "FF0000";
+		$scope.settingsVisible = true;
+
+		$scope.headerFontColor = "000000";
+		$scope.headerBackgroundColor = "FFFFFF";
+		$scope.contentFontColor = "000000";
+		$scope.contentBackgroundColor = "FFFFFF";
 
 		$scope.dye = function(selector, property, value) {
 			console.log("Set " + property + " of " + selector + " to " + value);

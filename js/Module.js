@@ -7,13 +7,11 @@
 	config(['$routeProvider',
 		function ($routeProvider) {
 			$routeProvider.when('/home', {
-				templateUrl: 'views/home.html',
-				controller: 'MainController'
+				templateUrl: 'views/home.html'
 			});
 
 			$routeProvider.when('/text', {
-				templateUrl: 'views/text.html',
-				controller: 'MainController'
+				templateUrl: 'views/text.html'
 			});
 
 			$routeProvider.otherwise({
